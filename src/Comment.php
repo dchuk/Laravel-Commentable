@@ -64,7 +64,7 @@ class Comment extends Node
      *
      * @return static
      */
-    public function createComment(Model $commentable, $data, Model $creator): bool
+    public function createComment(Model $commentable, $data, Model $creator)
     {
         $comment = new static();
         $comment->forceFill(array_merge($data, [
@@ -72,7 +72,7 @@ class Comment extends Node
             'creator_type' => get_class($creator),
         ]));
 
-        return (bool) $commentable->comments()->save($comment);
+        return $commentable->comments()->save($comment);
     }
 
     /**
