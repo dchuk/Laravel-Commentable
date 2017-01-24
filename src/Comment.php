@@ -81,9 +81,9 @@ class Comment extends Node
      *
      * @return mixed
      */
-    public function updateComment($id, $data): bool
+    public function updateComment($id, $data)
     {
-        return (bool) static::find($id)->update($data);
+        return static::find($id)->update($data);
     }
 
     /**
