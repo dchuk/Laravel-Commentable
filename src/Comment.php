@@ -24,10 +24,11 @@ namespace BrianFaust\Commentable;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
-use Kalnoy\Nestedset\Node;
+use Kalnoy\Nestedset\NodeTrait;
 
-class Comment extends Node
+class Comment extends Model
 {
+    use NodeTrait;
     /**
      * @var array
      */
